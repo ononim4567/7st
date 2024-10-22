@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container_buttons{
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            justify-content: center;
+            align-items: center;
+        }
+        .button{
+            cursor: pointer;
+            font-size: 24px;
+            /*плавность*/
+            /* time, rule, func*/
+            transition: 200ms all linear;
+        }
+        .container_buttons-color{
+            border-bottom: 2px solid blue;
+            color: blue;
+        }
+        .container_buttons-color:hover{
+            color: orange;
+            border-bottom: 2px solid orange;
+        }
+        .container_buttons-solid{
+            background: orange;
+            color: black;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 100ms all  ease-in;
+        }
+        .container_buttons-solid:hover{
+            scale: 1.2;
+
+        }
+        .container_buttons-skip{
+            background-color: cadetblue;
+            border-radius: 12px;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .skip-svg{
+            width: 35px;
+            height: 35px;
+        }
+        .container_buttons-skip:hover{
+            transform: rotate(90deg);
+            /* transform: translateX(10px); */
+
+        }
+        .container_buttons-hint{
+            color: blue;
+            border: 2px solid blue;
+            border-radius: 12px;
+            padding: 10px 20px;
+        }
+        .container_buttons-hint:hover{
+            color: white;
+            border:2px solid transparent;
+            background-color: blue;
+            transform: translateY(-6px);
+        }
+        .container_permanent{
+
+        }
+        .container_permanent-item{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            /* time, count, func, animation-name */
+            animation: .3s 70 linear rotation;
+        }
+        @keyframes rotation{
+            from {
+                transform: rotate(0deg) translateX(0);
+            }
+            to{
+                transform: rotate(360deg) translateX(200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container_buttons">
+            <div class="container_buttons-color button">
+                Меню
+            </div>
+            <div class="container_buttons-solid">
+                Назад
+            </div>
+            <div class="container_buttons-skip button">
+                <svg class="skip-svg" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M386.3 160H336c-17.7 0-32 14.3-32 32s14.3 32 32 32H464c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v51.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0s-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3s163.8-62.5 226.3 0L386.3 160z"></path></svg>
+            </div>
+            <div class="container_buttons-hint button">
+                нажми
+            </div>
+        </div>
+        <div class="container_permanent">
+            <div class="container_permanent-item">
+                animate !
+            </div>
+        </div>
+    </div>
+</body>
+</html>
